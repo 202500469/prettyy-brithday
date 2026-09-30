@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Magical World for You ✨</title>
+    <!-- Google Fonts Fused with Luxury Arabic Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,700;1,400&family=Cairo:wght@400;600;700;900&family=Great+Vibes&family=Reem+Kufi:wght@600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --pastel-pink: #ffd6e0;
+            --pastel-purple: #e8dff5;
+            --pastel-peach: #fcf1e7;
+            --pastel-blue: #d6e2e9;
+            --glow-magenta: #ff85a2;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            scroll-behavior: auto;
+        }
+
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            background: linear-gradient(180deg, #fff2f5 0%, #f3e8ff 25%, #e0f2fe 50%, #fce7f3 75%, #fff0f5 100%);
+            background-size: 200% 200%;
+            animation: atmosphericShift 15s ease infinite alternate;
+            color: #4a3e56;
+        }
+
+        .luxury-arabic-title {
+            font-family: 'Amiri', serif;
+            font-weight: 700;
+        }
+
+        .kufi-title {
+            font-family: 'Reem Kufi', sans-serif;
+        }
+
+        @keyframes atmosphericShift {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        .floating-heart {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1;
+            font-size: 1.2rem;
+            animation: floatUp 5s linear infinite;
+            filter: drop-shadow(0 0 6px rgba(255, 182, 193, 0.8));
+            opacity: 0;
+            will-change: transform, opacity;
+            transform: translateZ(0);
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(105vh) scale(0.6) rotate(0deg);
+                opacity: 0;
+            }
+            15% { opacity: 0.8; }
+            85% { opacity: 0.8; }
+            100% {
+                transform: translateY(-10vh) scale(1.2) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .sparkle-particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle, #ffffff 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            animation: pulseSparkle 2s ease-in-out infinite alternate;
+            will-change: transform, opacity;
+        }
+
+        @keyframes pulseSparkle {
+            0% { transform: scale(0.5); opacity: 0.2; }
+            100% { transform: scale(1.4); opacity: 0.9; }
+        }
+
+        .blob-frame-1 { border-radius: 65% 35% 60% 40% / 45% 55% 45% 55%; }
+        .blob-frame-2 { border-radius: 40% 60% 35% 65% / 55% 40% 60% 45%; }
+        .blob-frame-3 { border-radius: 55% 45% 70% 30% / 35% 65% 35% 65%; }
+        .blob-frame-4 { border-radius: 35% 65% 45% 55% / 60% 35% 65% 40%; }
+
+        .memory-card-3d {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 40px rgba(235, 150, 185, 0.25), inset 0 0 20px rgba(255, 255, 255, 0.9);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            will-change: transform;
+        }
+
+        .memory-card-3d:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(255, 117, 140, 0.35);
+            z-index: 30;
+        }
+
+        .luxury-open-btn {
+            position: relative;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #a1c4fd 100%);
+            background-size: 200% 200%;
+            animation: gradientMove 3s ease infinite, luxuryPulse 1.5s infinite;
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 15px 35px rgba(255, 133, 162, 0.45), 0 0 25px rgba(255, 255, 255, 0.8);
+            font-family: 'Reem Kufi', sans-serif;
+        }
+
+        .luxury-massage-btn {
+            position: relative;
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 50%, #b8a7ea 100%);
+            background-size: 200% 200%;
+            animation: gradientMove 2s ease infinite, massageGlow 1.5s infinite;
+            border: 3px solid rgba(255, 255, 255, 0.95);
+            box-shadow: 0 15px 40px rgba(255, 117, 140, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.6);
+            font-family: 'Reem Kufi', sans-serif;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes luxuryPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes massageGlow {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 117, 140, 0.8), 0 15px 40px rgba(255, 117, 140, 0.5); }
+            70% { transform: scale(1.07); box-shadow: 0 0 0 20px rgba(255, 117, 140, 0), 0 20px 50px rgba(255, 117, 140, 0.7); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 117, 140, 0), 0 15px 40px rgba(255, 117, 140, 0.5); }
+        }
+
+        .title-glow {
+            text-shadow: 0 0 20px rgba(255, 182, 193, 0.9), 0 0 40px rgba(216, 180, 254, 0.8);
+        }
+
+        .prettyy-signature {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.8rem;
+            color: #ff758c;
+            text-shadow: 0 0 15px rgba(255, 117, 140, 0.6), 0 0 30px rgba(255, 182, 193, 0.8);
+            animation: prettyyFloat 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes prettyyFloat {
+            0% { transform: translateY(0) scale(1) rotate(-2deg); opacity: 0.9; }
+            100% { transform: translateY(-10px) scale(1.06) rotate(2deg); opacity: 1; text-shadow: 0 0 25px rgba(255, 117, 140, 0.9), 0 0 45px rgba(216, 180, 254, 1); }
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fff0f5; }
+        ::-webkit-scrollbar-thumb { background: #ffb6c1; border-radius: 10px; }
+    </style>
+</head>
+<body class="relative min-h-screen">
+
+    <audio id="bg-music" loop preload="auto">
+        <source src="WhatsApp1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="hearts-container" class="fixed inset-0 pointer-events-none z-10"></div>
+    <div id="sparkles-container" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- OVERLAY SCREEN -->
+    <div id="welcome-overlay" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white/85 backdrop-blur-xl transition-opacity duration-500">
+        <div class="text-center px-6 max-w-md">
+            <div class="inline-block p-4 mb-3 rounded-full bg-pink-100/80 text-pink-500 animate-bounce">
+                 💖 
+            </div>
+            <h1 class="luxury-arabic-title title-glow text-4xl md:text-5xl text-purple-900 mb-4 tracking-wide">Dedicated to Sara</h1>
+            <p class="text-base md:text-lg text-purple-700 font-medium mb-10 leading-relaxed">
+                افتحي يلا 🌸
+            </p>
+            <button onclick="startExperience()" class="luxury-open-btn px-12 py-5 text-2xl font-black text-white rounded-full tracking-wider flex items-center justify-center gap-3 mx-auto transition-all duration-300">
+                <span>OPEN</span>
+                <span class="text-2xl"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="relative z-20 flex flex-col items-center px-4 py-12 space-y-24 max-w-6xl mx-auto">
+
+        <!-- SECTION 1: INTRO MESSAGE -->
+        <section class="text-center mt-8 max-w-2xl mx-auto px-4">
+            <div class="inline-block px-6 py-2 rounded-full bg-white/80 border border-pink-200 text-pink-600 text-sm font-bold mb-6 shadow-sm backdrop-blur-md">
+                ✨ A special day
+            </div>
+            <h2 id="intro-line-1" class="luxury-arabic-title text-4xl md:text-5xl text-purple-900 leading-snug mb-4 opacity-0 transform translate-y-6 transition-all duration-500">
+                "كل سنة وأنتي كل حاجة حلوة في حياتي... ✨"
+            </h2>
+            <p id="intro-line-2" class="text-xl md:text-2xl text-pink-600 font-medium opacity-0 transform translate-y-6 transition-all duration-500 delay-200">
+               اليوم الي القمر نزل فيه الارض 🌸💗
+            </p>
+        </section>
+
+        <!-- SECTION 2: MEMORIES GALLERY -->
+        <section class="w-full px-2">
+            <div class="text-center mb-12">
+                <span class="text-sm font-bold tracking-widest text-pink-500 uppercase">Memory Lane</span>
+                <h3 class="luxury-arabic-title title-glow text-4xl md:text-5xl text-purple-900 mt-2"> عشرة العمر كله 💖</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-items-center">
+                
+                <div class="memory-card-3d blob-frame-1 w-64 h-80 p-3 transform hover:-rotate-3">
+                    <div class="w-full h-full blob-frame-1 overflow-hidden relative group">
+                        <img src="https://picsum.photos/400/550?random=101" alt="Memory 1" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pink-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 text-white font-bold text-lg">7abibty❤️ </div>
+                    </div>
+                </div>
+
+                <div class="memory-card-3d blob-frame-2 w-60 h-72 p-3 transform hover:rotate-3 md:translate-y-6">
+                    <div class="w-full h-full blob-frame-2 overflow-hidden relative group">
+                        <img src="https://picsum.photos/400/550?random=102" alt="Memory 2" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 text-white font-bold text-lg">😍😍❤️</div>
+                    </div>
+                </div>
+
+                <div class="memory-card-3d blob-frame-3 w-64 h-80 p-3 transform hover:-rotate-2">
+                    <div class="w-full h-full blob-frame-3 overflow-hidden relative group">
+                        <img src="https://picsum.photos/400/550?random=103" alt="Memory 3" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pink-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 text-white font-bold text-lg"> توحفهه اويي❤️😍 </div>
+                    </div>
+                </div>
+
+                <div class="memory-card-3d blob-frame-4 w-60 h-72 p-3 transform hover:rotate-2 md:translate-y-6">
+                    <div class="w-full h-full blob-frame-4 overflow-hidden relative group">
+                        <img src="https://picsum.photos/400/550?random=104" alt="Memory 4" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 text-white font-bold text-lg"> حياتي😍 💫</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: DREAMY BREAK -->
+        <section class="w-full max-w-2xl text-center px-4">
+            <div class="p-8 md:p-10 rounded-3xl bg-white/50 border border-white/90 backdrop-blur-md shadow-xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-pink-300/30 rounded-full blur-2xl"></div>
+                <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-purple-300/30 rounded-full blur-2xl"></div>
+                <p class="luxury-arabic-title title-glow text-3xl md:text-4xl text-purple-950 leading-relaxed mb-3">
+                    "وجودكِ في حياتي ليس مجرد مصادفة، بل هو أجمل قدر حدث لي" ❤️
+                </p>
+                <span class="text-base text-pink-500 font-semibold">دمتِ لي كل الأعوام</span>
+            </div>
+        </section>
+
+        <!-- SECTION 4: MORE MEMORIES -->
+        <section class="w-full max-w-4xl px-4 flex flex-col md:flex-row items-center justify-around gap-10">
+            
+            <div class="memory-card-3d blob-frame-2 w-72 h-96 p-4 transform hover:rotate-3">
+                <div class="w-full h-full blob-frame-2 overflow-hidden relative">
+                    <img src="https://picsum.photos/400/600?random=105" alt="Memory 5" class="w-full h-full object-cover">
+                </div>
+                <p class="text-center text-base font-bold text-purple-800 mt-4">   يوم كان توحفه 🌟</p>
+            </div>
+
+            <div class="memory-card-3d blob-frame-4 w-72 h-96 p-4 transform hover:-rotate-3 md:translate-y-8">
+                <div class="w-full h-full blob-frame-4 overflow-hidden relative">
+                    <img src="https://picsum.photos/400/600?random=106" alt="Memory 6" class="w-full h-full object-cover">
+                </div>
+                <p class="text-center text-base font-bold text-pink-600 mt-4">   احلي صورة 😍✨</p>
+            </div>
+
+        </section>
+
+        <!-- SECTION 5: MASSAGE BUTTON & LETTER BOX -->
+        <section class="w-full max-w-2xl text-center pt-8 pb-4 px-4">
+            
+            <button id="massage-btn" onclick="openSecretLetter()" class="luxury-massage-btn px-14 py-6 text-3xl font-black text-white rounded-full tracking-widest flex items-center justify-center gap-4 mx-auto transition-all">
+                <span>MASSAGE</span>
+                <span class="text-3xl animate-pulse">💌</span>
+            </button>
+
+            <div id="letter-box" class="hidden mt-8 w-full p-8 md:p-12 bg-white/95 backdrop-blur-xl rounded-3xl border-2 border-pink-200 shadow-2xl text-right relative overflow-hidden transition-all duration-500">
+                <div class="flex justify-between items-center mb-6 pb-4 border-b border-pink-100">
+                    <span class="kufi-title text-2xl text-pink-500 font-bold">💌 رسالة من القلب</span>
+                    <span class="text-xs text-purple-600 font-bold bg-purple-50 px-3 py-1.5 rounded-full border border-purple-100">خاصة جداً</span>
+                </div>
+                
+                <p id="typed-letter" class="text-xl md:text-2xl text-purple-950 font-medium leading-loose min-h-[200px] whitespace-pre-line"></p>
+
+                <div class="mt-8 pt-4 border-t border-pink-100 text-left">
+                    <span class="luxury-arabic-title text-pink-600 font-bold text-2xl">❤️ مع كل الحب</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="w-full text-center pt-8 pb-12">
+            <div class="prettyy-signature">prettyy</div>
+            <div class="w-20 h-0.5 bg-gradient-to-r from-transparent via-pink-400 to-transparent mx-auto mt-2"></div>
+        </footer>
+
+    </main>
+
+    <script>
+        let autoScrollId = null;
+        let isAutoScrolling = false;
+        const scrollSpeed = 2.2; // سرعة سريعة وسلسة جداً
+
+        const fullLetterMessage = 
+`إلى أميرتي وحبيبة قلبي ✨
+
+في هذا اليوم المميز جداً، أود أن أقول لكِ شيئاً من أعمق نقطة في قلبي. وجودكِ في حياتي هو أجمل هدية قدّمتها لي الأيام. أنتي لستِ فقط صديقتي وحبيبتي، أنتي النور الذي يضيء أيامي والضحكة التي تزيل كل تعبي.
+
+أتمنى لكِ في عامكِ الجديد أن تحققي كل حلم تتمنينه، وأن تظل ابتسامتكِ الساحرة تشرق في كل مكان. أدامكِ الله لي سنداً وفرحاً لا ينتهي.
+
+كل عام وأنتِ بقلبي.. كل عام وأنتِ الأجمل دائماً! ❤️✨`;
+
+        function spawnHearts() {
+            const container = document.getElementById('hearts-container');
+            const heartIcons = ['💖', '🌸', '✨', '💕', '💗'];
+            
+            // تقليل العدد قليلاً لزيادة سلاسة الشاشة على التليفون
+            setInterval(() => {
+                if(document.hidden) return;
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart';
+                heart.innerText = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                heart.style.left = `${Math.random() * 92}vw`;
+                heart.style.animationDuration = `${3.5 + Math.random() * 2.5}s`;
+                heart.style.fontSize = `${1 + Math.random() * 1}rem`;
+                container.appendChild(heart);
+
+                setTimeout(() => { heart.remove(); }, 6000);
+            }, 450);
+        }
+
+        function spawnSparkles() {
+            const container = document.getElementById('sparkles-container');
+            for (let i = 0; i < 25; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle-particle';
+                const size = Math.random() * 5 + 3;
+                sparkle.style.width = `${size}px`;
+                sparkle.style.height = `${size}px`;
+                sparkle.style.top = `${Math.random() * 100}%`;
+                sparkle.style.left = `${Math.random() * 100}%`;
+                sparkle.style.animationDelay = `${Math.random() * 2}s`;
+                container.appendChild(sparkle);
+            }
+        }
+
+        function startExperience() {
+            const overlay = document.getElementById('welcome-overlay');
+            const music = document.getElementById('bg-music');
+
+            overlay.style.opacity = '0';
+            setTimeout(() => { overlay.style.display = 'none'; }, 500);
+
+            music.play().catch(err => console.log('Audio playback policy'));
+
+            document.getElementById('intro-line-1').classList.remove('opacity-0', 'translate-y-6');
+            setTimeout(() => {
+                document.getElementById('intro-line-2').classList.remove('opacity-0', 'translate-y-6');
+            }, 300);
+
+            startSmoothAutoScroll();
+        }
+
+        function performScroll() {
+            if (!isAutoScrolling) return;
+
+            window.scrollBy(0, scrollSpeed);
+
+            // توقف دقيق ومباشر عند نهاية الصفحة دون زيادة أو تمرير فارغ
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            if (window.scrollY >= maxScroll - 5) {
+                stopAutoScroll();
+                return;
+            }
+
+            autoScrollId = requestAnimationFrame(performScroll);
+        }
+
+        function startSmoothAutoScroll() {
+            isAutoScrolling = true;
+            autoScrollId = requestAnimationFrame(performScroll);
+        }
+
+        function stopAutoScroll() {
+            if (isAutoScrolling) {
+                isAutoScrolling = false;
+                if (autoScrollId) {
+                    cancelAnimationFrame(autoScrollId);
+                }
+            }
+        }
+
+        ['touchstart', 'touchmove', 'mousedown', 'wheel', 'keydown'].forEach(evt => {
+            window.addEventListener(evt, stopAutoScroll, { passive: true });
+        });
+
+        function openSecretLetter() {
+            stopAutoScroll();
+            const btn = document.getElementById('massage-btn');
+            const box = document.getElementById('letter-box');
+            const target = document.getElementById('typed-letter');
+
+            btn.style.transform = 'scale(0.8)';
+            btn.style.opacity = '0';
+            setTimeout(() => {
+                btn.style.display = 'none';
+                box.classList.remove('hidden');
+                
+                let index = 0;
+                target.innerHTML = '';
+
+                function typeChar() {
+                    if (index < fullLetterMessage.length) {
+                        target.innerHTML += fullLetterMessage.charAt(index);
+                        index++;
+                        setTimeout(typeChar, 20);
+                    }
+                }
+                typeChar();
+            }, 300);
+        }
+
+        window.onload = () => {
+            spawnHearts();
+            spawnSparkles();
+        };
+    </script>
+</body>
+</html>
